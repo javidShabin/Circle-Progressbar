@@ -8,16 +8,23 @@ body{
     background: #e3edf7;
     height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 7rem;
+}
+
+/* Circle one */
 .skill{
     width: 160px;
     height: 160px;
     /* background: red; */
     position: relative;
 }
-.outer{
+.skill .outer{
     height: 160px;
     width: 160px;
     border-radius: 50%;
@@ -25,7 +32,7 @@ body{
     box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
                 -6px -6px 10px -1px rgba(255, 255, 255, 0.7)
 }
-.inner{
+.skill .inner{
     height: 120px;
     width: 120px;
     border-radius: 50%;
@@ -38,11 +45,11 @@ body{
                  0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
                  0px 12px 10px -10px rgba(0, 0, 0, 0.05)
 }
-#number{
+.skill #number{
     font-weight: 600;
     color: #555;
 }
-circle{
+.skill circle{
     fill: none;
     stroke: url(#GradientColor);
     stroke-width: 20px;
@@ -50,7 +57,7 @@ circle{
     stroke-dashoffset: 472;
     animation: anim 2s linear forwards;
 }
-svg{
+.skill svg{
     position: absolute;
     top: 0;
     left: 0;
@@ -59,5 +66,126 @@ svg{
 @keyframes anim{
     100%{
         stroke-dashoffset: 165;
+    }
+}
+
+/* Circle two */
+
+.skill-2{
+    width: 160px;
+    height: 160px;
+    /* background: red; */
+    position: relative;
+}
+.skill-2 .outer{
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7)
+}
+.skill-2 .inner{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+                inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+                -0.5px -0.5px 0px rgba(255, 255, 255, 0.7),
+                 0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+                 0px 12px 10px -10px rgba(0, 0, 0, 0.05)
+}
+.skill-2 #number-2{
+    font-weight: 600;
+    color: #555;
+}
+.skill-2 circle{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: anim-2 2s linear forwards;
+}
+.skill-2 svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes anim-2{
+    100%{
+        stroke-dashoffset: 236;
+    }
+}
+
+/* Circle three */
+
+.skill-3{
+    width: 160px;
+    height: 160px;
+    /* background: red; */
+    position: relative;
+}
+.skill-3 .outer{
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7)
+}
+.skill-3 .inner{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+                inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+                -0.5px -0.5px 0px rgba(255, 255, 255, 0.7),
+                 0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+                 0px 12px 10px -10px rgba(0, 0, 0, 0.05)
+}
+.skill-3 #number-3{
+    font-weight: 600;
+    color: #555;
+}
+.skill-3 circle{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: anim-3 2s linear forwards;
+}
+.skill-3 svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes anim-3{
+    100%{
+        stroke-dashoffset: 306;
+    }
+}
+
+@media screen and (width < 736px) {
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+    }
+}
+@media screen and (width < 448px){
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
     }
 }
